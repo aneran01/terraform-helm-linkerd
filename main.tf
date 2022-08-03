@@ -63,7 +63,7 @@ resource "helm_release" "control_plane" {
   namespace  = var.chart_namespace
   create_namespace = false
   repository = "https://helm.linkerd.io/edge"
-  version    = "1.1.9-edge"
+  version    = "1.1.10-edge"
   timeout    = var.chart_timeout
   atomic     = var.atomic
   devel      = true
