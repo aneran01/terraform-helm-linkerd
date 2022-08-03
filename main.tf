@@ -95,6 +95,10 @@ resource "helm_release" "control_plane" {
   )
 
   depends_on = [helm_release.cni, module.issuer]
+
+  lifecycle {
+    ignore_changes = [ manifest ]
+  }
 }
 
 resource "helm_release" "extension" {
